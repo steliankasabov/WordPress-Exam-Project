@@ -38,15 +38,13 @@
         <div class="menu-wrapper center-relative">
             <nav id="header-main-menu">
                 <div class="mob-menu">MENU</div>
-                <ul class="main-menu sm sm-clean">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#video">Video</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <?php
+                wp_nav_menu( array(
+                    'menu' => 'Main Menu', // Specify the name of the menu
+                    'container' => 'ul', // Defines the container element, though 'ul' is not a valid value for 'container'
+                    'menu_class' => 'main-menu sm sm-clean', // CSS class for the menu
+                ) );
+                ?>
                 </ul>
             </nav>
         </div>
